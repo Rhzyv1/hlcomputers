@@ -81,43 +81,80 @@ border-radius: 20px;
 
 .menu{
 	width: 600px;
-	margin: 0 auto}
+	margin: 0 auto ;
+position: }
 
 .menu nav ul{ display: flex;
 margin-top: 5px;}
 
 
 .menu nav ul li{
-font-size: 20px;
+font-size: 18px;
 list-style: none;
-color: white;display: flex;;
-padding: 10px 10px;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 20px;
+color: white;
 cursor: pointer;
 font-family:CabinetGrotesk-Regular;
-text-shadow: 0px 0px 20px black}
+text-shadow: 0px 0px 20px black;
+margin: 0px 5px}
 
 .menu nav ul li i{ margin-right:5px;
-font-size: 27px;
+font-size: 23px;
 
 text-shadow: 0px 0px 20px black}
 
 
-.menu nav ul li:hover {
-background: rgba(0,0,0,0.8);
-transition: all 2s ease;}
+.menu nav ul li a {
+transition: all 2s ease;;
+padding: 10px;}
 
-
-.menu nav ul li:hover {
+.menu nav ul li a:hover {
 background: rgba(0,0,0,0.8);
-transition: all 2s ease;}
+transition: all 2s ease;;
+padding:  10px;}
 
 
 .menu nav ul li a{text-decoration: none;
-color: white;}
+color: white;;
+display:inline-block;}
+
+
+.menu nav ul .productos{display: block;}
+
+.menu nav ul li  .submenu{
+display:none;
+z-index: 2;
+padding: 10px 24.5px;
+margin: 0px;
+position: absolute;
+background: rgba(0,0,0,0.8);
+visibility: hidden;
+opacity: 0}
+
+
+.menu nav ul .productos:hover >.submenu {
+  visibility:visible;
+opacity: 1;
+transition: all 2s ease;}
+
+.menu nav ul .productos .submenu li {
+display: flex;
+justify-content: left;
+align-items: center;
+margin: 0px;
+padding: 0px;
+border: 1px solid gray}
+
+
+.menu nav ul .productos .submenu li a {
+display: flex;
+justify-content: left;
+align-items: center;}
+
+
+
+
+
+
 
 #label-bars{ color: white; font-size: 30px;
 position: absolute; top: 20px;
@@ -146,9 +183,14 @@ left: 0px}
 
 
 .inicio .mensaje{
-width: 750px;margin: 0 auto;
-margin-top: 130px;
-text-align: center;}
+width: 750px;
+margin: 0 auto;
+margin-top: 150px;
+text-align: center;
+position: relative;
+;display: block;
+justify-content: center;
+align-items: center;}
 
 
 .inicio .mensaje h1{color: gray;
@@ -193,27 +235,22 @@ margin-top: 30px;}
 box-shadow: 0px 0px 10px rgb(32, 125, 121) ;
 transition: all 1s ease}
 
-
 .Cuadro-Indormacion{box-shadow: 10px 10px 10px gray}
 
 .Infromacion{width: 100%;
 display: grid;
 grid-template-columns:repeat(4,1fr);;
 max-width: 1000px;
-margin: 0 auto;
-}
+margin: 0 auto;}
 
 .Infromacion div{padding-bottom: 20px;
 cursor: pointer;}
 
+.Infromacion div:hover{background: rgba(30,30,50,1);}
 
-.Infromacion div:hover{background: rgba(10,10,10,1);}
+.Infromacion div:hover > p,a{color: white;}
 
-
-.Infromacion div:hover > p,a{color: white}
-
-
-.Infromacion div:hover > p a{color: white}
+.Infromacion div:hover > p a{color: white;}
 
 .Infromacion div i{font-size: 30px;
 display: flex;justify-content: center;
@@ -281,18 +318,19 @@ margin: 0px auto;}
 font-size:18px;
 font-family:CabinetGrotesk-Regular;
 color:black;
-margin-top: 10px}
+margin-top: 15px;
+width: 90%}
 
 
 .empresa-imagen{background:rgba(95,110,240);
-width: 380px; height:290px;;
+width: 400px; height:290px;;
 margin: 0 auto;
 border-radius:20px;
 display: flex;;
 margin-top: 20px}
 
 
-.empresa-imagen img{width: 380px;
+.empresa-imagen img{width:400px;
 height:280px;
 margin: 0 auto;display: flex;
 border-radius:20px;
@@ -301,7 +339,8 @@ margin-left: 10px}
 
 .barra{background:rgba(95,110,240);
 width: 100%;
-margin: 0px 0px}
+margin: 0px 0px;
+height: 200px}
 
 .barra .inter-barra{width: 1300px;
 margin: 0 auto;
@@ -318,6 +357,84 @@ display: grid;
 grid-template-columns:repeat(4,1fr);;
 max-width: 1100px;
 margin: 0 auto;}
+
+
+
+/*Productos*/
+
+
+.Productos {width: 90%;
+max-width: 1100px;
+margin: 50px auto;
+display: grid;
+grid-template-columns: repeat(2,1fr);}
+
+
+
+.Productos .Productos-titulo span{
+font-size: 18px;
+font-family:CabinetGrotesk-Regular;
+color:rgba(95,110,240) ;
+border-bottom: 1px solid rgba(95,110,240) ;
+margin-bottom: 10px}
+
+
+
+
+.Productos .Productos-titulo h2{color: black;
+font-size:28px;font-family:Satoshi-Black;
+margin: 10px auto;}
+
+
+
+.Productos .Productos-titulo h2 b{color:rgba(95,110,240);
+font-size:28px;font-family:Satoshi-Black;
+margin: 0px auto;}
+
+
+.Productos .Productos-titulo ul{padding: 0px;
+margin: 0px}
+
+.Productos .Productos-titulo ul li{
+background:rgba(95,150,240, 0.9);
+margin-bottom: 10px;
+list-style: none;
+padding:10px ;
+display: flex;}
+
+.Productos .Productos-titulo ul li:hover{
+background:rgba(25,10,30,1);
+list-style: none;}
+
+.Productos .Productos-titulo ul li a {
+font-size:17px;
+font-family:CabinetGrotesk-Regular;
+color:white;
+margin-top: 10px;
+text-decoration: none;}
+
+
+.Productos .Productos-titulo ul li a:hover {
+	color:rgba(95,150,240, 0.9)}
+
+
+
+.Productos .Productos-titulo ul li i{
+color: white;
+font-size: 30px;
+display: flex;;
+align-items: center;
+justify-content: center;;
+padding-left:20px;
+padding-right:20px}
+
+
+.Producto-img img{width:100%;
+height:280px;
+margin: 0 auto;display: flex;
+border-radius:20px;
+margin-top: 100px}
+
 
 /*Pie de Pagina*/
 footer{background:rgb(3, 28, 43);
@@ -344,6 +461,17 @@ font-family:CabinetGrotesk-Regular;
 color:white;}
 
 
+
+.footer-a div p a{
+text-decoration: none;}
+
+
+.footer-a div p i{
+font-size:18px;;
+color:rgb(226, 212, 36);
+padding:5px 10px }
+
+
 .footer-a div p b{
 font-size:18px;
 font-family:CabinetGrotesk-Regular;
@@ -367,7 +495,11 @@ border-radius: 20px;
 cursor: pointer;
 font-family:CabinetGrotesk-Regular;
 margin-left: 30px;
-}
+  list-style-type: "➤ ";
+list-style-color:blue }
+
+.footer-a div  ul li::marker {
+  color:rgb(226, 212, 36);}
 
 
 .footer-a ul li:hover {
@@ -376,6 +508,10 @@ transition: all 2s ease;}
 
 .footer-a ul li a{text-decoration: none;
 color: white;}
+
+
+.footer-a ul li a:hover{text-decoration: none;
+color:rgb(239, 159, 8);}
 
 
 
@@ -407,14 +543,37 @@ border-radius:50%}
 
 .footer-a div .sociales a:hover{
 	color: blue;
-background: black}
+background:rgba(10,10,50);}
+
+
+.footer-a .marcas ul{ display:block;
+margin-top: 5px;
+width: 200px; margin: 10px auto;	}
+
+
+.footer-a .marcas ul li{
+font-size: 15px;
+color: white;
+border-radius: 20px;
+cursor: pointer;
+font-family:CabinetGrotesk-Regular;
+margin-left: 30px;
+  list-style:circle;
+}
+
+.footer-a .marcas ul li::maker{color: yellow}
+
+
+.footer-a div ul li:hover{
+color:rgb(239, 159, 8);}
+
 
 .grupo2 {
 width: 95%;
 max-width: 1200px;;
 color: white;
 margin: 0 auto;
-border-top: 1px solid yellow;
+border-top: 1px solid rgb(239, 159, 8);
 padding: 10px 0px}
 
 .grupo2  a{
@@ -425,6 +584,10 @@ text-align: center;
 display: flex;
 justify-content: center;
 align-items: center;text-decoration: none;}
+
+
+.grupo2  a:hover{color:rgb(239, 159, 8);}
+
 
 
 .grupo2 p{
@@ -440,12 +603,12 @@ margin: 0 auto}
 @media screen and (min-width: 550px) and (max-width: 1023px)
 {
 .inicio{
-	width: 100%;
-	height: 500px;
-	background-size: 100% 500px;
-	background-repeat: no-repeat;;
-	position: relative;
-	background-attachment: fixed;}
+  width: 100%;
+  height: 500px;
+  background-size: 100% 500px;
+  background-repeat: no-repeat;;
+  position: relative;
+  background-attachment: fixed;}
 
 
 
@@ -460,8 +623,8 @@ background: rgba(0,0,0,0.8);
 border-radius: 10px}
 
 .menu{
-	width: 450px;
-	margin: 0 auto}
+  width: 450px;
+  margin: 0 auto}
 
 .menu nav ul{ display: flex;
 margin-top: 5px;}
@@ -663,7 +826,7 @@ margin: 0px auto;}
 
 
 .empresa .empresa-titulo p{font-size: 13px;
-	font-family:CabinetGrotesk-Regular;
+  font-family:CabinetGrotesk-Regular;
 color:black;
 margin-top: 10px}
 
@@ -701,9 +864,9 @@ display: grid;
 grid-template-columns:repeat(4,1fr);
 max-width: 1100px;
 margin: 0 auto;}
-	
+  
 
-	}
+  }
 
 
 /*Para celudar*/
@@ -712,12 +875,12 @@ margin: 0 auto;}
 
 {
 .inicio{
-	width: 100%;
-	height: 500px;
-	background-size: 100% 500px;
-	background-repeat: no-repeat;;
-	position: relative;
-	background-attachment: fixed;}
+  width: 100%;
+  height: 500px;
+  background-size: 100% 500px;
+  background-repeat: no-repeat;;
+  position: relative;
+  background-attachment: fixed;}
 
 
 
@@ -732,8 +895,8 @@ background: rgba(0,0,0,0.8);
 border-radius: 10px}
 
 .menu{
-	width: 450px;
-	margin: 0 auto;
+  width: 450px;
+  margin: 0 auto;
 display: none;}
 
 #label-bars{ color: white;
@@ -765,8 +928,8 @@ justify-content: left}
 .menu-desplegable nav ul{ display: block;
 margin-top: 5px;
 position: absolute;
-	top: 40px;
-	left: 0px}
+  top: 40px;
+  left: 0px}
 
 
 .menu-desplegable nav ul li{
@@ -938,7 +1101,7 @@ margin: 0px auto;}
 
 
 .empresa .empresa-titulo p{font-size: 15px;
-	font-family:CabinetGrotesk-Regular;
+  font-family:CabinetGrotesk-Regular;
 color:black;
 margin-top: 10px}
 
@@ -978,4 +1141,4 @@ max-width: 1100px;
 margin: 0 auto;}
 
 
-	}
+  }
